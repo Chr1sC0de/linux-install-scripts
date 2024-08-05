@@ -1,4 +1,5 @@
 #! /usr/bin/bash
+
 : '
 install node version manager (nvm)
 '
