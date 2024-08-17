@@ -8,11 +8,12 @@ if ! type rye &>/dev/null; then
     echo "INFO: rye not installed, installing"
     curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash
     echo "INFO: rye finished installing"
-    ehco "INFO"
+    echo "INFO: adding rye completions"
     mkdir -p ~/.local/share/bash-completion/completions
     # shellcheck disable=SC1091
     source "$HOME/.rye/env"
     rye self completion >~/.local/share/bash-completion/completions/rye.bash
+    echo "INFO: finished adding rye completions"
 else
     echo "INFO: rye already installed"
 fi
