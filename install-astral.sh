@@ -1,6 +1,17 @@
-#! /usr/bin/bash
+#!/bin/bash
 
 : '
-install rye and uv
+Install rye, it already ships with uv
 '
-curl -sSf https://rye.astral.sh/get | bash
+
+if ! type rye &>/dev/null; then
+    echo "INFO: rye not installed, installing"
+    curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash
+    echo "INFO: rye finished installing"
+    ehco "INFO"
+    mkdir -p ~/.local/share/bash-completion/completions
+    source "$HOME/.rye/env"
+    rye self completion >~/.local/share/bash-completion/completions/rye.bash
+else
+    echo "INFO: rye already installed"
+fi

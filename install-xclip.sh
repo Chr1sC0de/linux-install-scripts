@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#!/bin/bash
 
 : '
 xclip allows us to copy things a pipe into the clipboard
