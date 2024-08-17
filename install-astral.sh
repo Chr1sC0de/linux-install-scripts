@@ -10,6 +10,7 @@ if ! type rye &>/dev/null; then
     echo "INFO: rye finished installing"
     ehco "INFO"
     mkdir -p ~/.local/share/bash-completion/completions
+    # shellcheck disable=SC1091
     source "$HOME/.rye/env"
     rye self completion >~/.local/share/bash-completion/completions/rye.bash
 else
