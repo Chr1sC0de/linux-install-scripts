@@ -15,3 +15,11 @@ if ! type rye &>/dev/null; then
 else
     echo "INFO: rye already installed"
 fi
+
+if ! type uv &>/dev/null; then
+    echo "INFO: uv not installed, installing"
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    echo "INFO: finished installing uv"
+else
+    echo "INFO: uv already installed"
+fi
