@@ -10,5 +10,5 @@ if ! type fzf &>/dev/null; then
     "$HOME/.fzf/install"
     echoinfo "Finished installing fzf"
 else
-    echoinfo "fzf found, skipping"
+    echoinfo "fzf found, skipping installation"
 fi

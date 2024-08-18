@@ -10,5 +10,5 @@ if type fzf &>/dev/null; then
     rm "$HOME/.fzf" -rf
     echoinfo "Finished uninstall fzf"
 else
-    echoinfo "fzf not found, skip uninstalling"
+    echoinfo "fzf not found, skip uninstall"
 fi

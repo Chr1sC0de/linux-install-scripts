@@ -18,5 +18,5 @@ if ! type bat &>/dev/null; then
     echoinfo "Finished creating symbolic link from batcat -> bat"
     echoinfo "Finished installing bat"
 else
-    echoinfo "bat found, skipping"
+    echoinfo "bat found, skipping installation"
 fi

@@ -20,7 +20,7 @@ if ! type rye &>/dev/null; then
     rye self completion >~/.local/share/bash-completion/completions/rye.bash
     echoinfo "Finished adding rye completions"
 else
-    echoinfo "Rye already installed, skipping"
+    echoinfo "Rye already installed, skipping installation"
 fi
 
 if ! type uv &>/dev/null; then
@@ -28,5 +28,5 @@ if ! type uv &>/dev/null; then
     curl -LsSf https://astral.sh/uv/install.sh | sh
     echoinfo "Finished installing uv"
 else
-    echoinfo "Uv already installed, skipping"
+    echoinfo "uv already installed, skipping installaltion"
 fi
