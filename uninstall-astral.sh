@@ -4,6 +4,10 @@
 uninstall astral environment
 '
 
+SCRIPT_DIR="$(dirname -- "${BASH_SOURCE[0]}")"
+
+source "$SCRIPT_DIR/utils.sh"
+
 echoinfo "uninstalling astral environment"
 
 FILES=(

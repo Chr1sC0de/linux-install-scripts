@@ -4,6 +4,10 @@
 install the aws cli
 '
 
+SCRIPT_DIR="$(dirname -- "${BASH_SOURCE[0]}")"
+
+source "$SCRIPT_DIR/utils.sh"
+
 if ! type aws &>/dev/null; then
     echoinfo "aws cli not installed, installing"
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"

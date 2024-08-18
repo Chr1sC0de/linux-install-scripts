@@ -4,6 +4,10 @@
 uninstall the aws cli binaries
 '
 
+SCRIPT_DIR="$(dirname -- "${BASH_SOURCE[0]}")"
+
+source "$SCRIPT_DIR/utils.sh"
+
 AWS_BINARIES=("/usr/local/bin/aws" "/usr/local/bin/aws_completer")
 AWS_CLI_FOLDER="/usr/local/aws-cli"
 

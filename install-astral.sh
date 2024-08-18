@@ -4,6 +4,10 @@
 Install rye, it already ships with uv
 '
 
+SCRIPT_DIR="$(dirname -- "${BASH_SOURCE[0]}")"
+
+source "$SCRIPT_DIR/utils.sh"
+
 if ! type rye &>/dev/null; then
     echoinfo "Rye not installed, installing"
     curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash
