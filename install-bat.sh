@@ -1,1 +1,1 @@
-sudo apt install bat
+apt install bat
