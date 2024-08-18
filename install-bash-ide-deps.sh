@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 : '
 dependencies for bash ide language server

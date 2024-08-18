@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 if ! type kitty >/dev/null; then
     echo "INFO: Installing kitty"
