@@ -10,8 +10,7 @@ source "$SCRIPT_DIR/utils.sh"
 
 if type code &>/dev/null; then
     echoinfo "VSCode found installing shellcheck for bash ide"
-    apt install shellcheck
-    if [[ $? -eq 0 ]]; then
+    if apt install shellcheck; then
         echoinfo "Finished installing shellcheck"
     else
         echoinfo "Failed to install shellcheck"
