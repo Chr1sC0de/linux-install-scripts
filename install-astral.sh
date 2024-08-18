@@ -5,23 +5,24 @@ Install rye, it already ships with uv
 '
 
 if ! type rye &>/dev/null; then
-    echo "INFO: rye not installed, installing"
+    echoinfo "Rye not installed, installing"
     curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash
-    echo "INFO: rye finished installing"
-    echo "INFO: adding rye completions"
+    echoinfo "Rye finished installing"
+
+    echoinfo "Adding rye completions"
     mkdir -p ~/.local/share/bash-completion/completions
     # shellcheck disable=SC1091
     source "$HOME/.rye/env"
     rye self completion >~/.local/share/bash-completion/completions/rye.bash
-    echo "INFO: finished adding rye completions"
+    echoinfo "Finished adding rye completions"
 else
-    echo "INFO: rye already installed"
+    echoinfo "Rye already installed, skipping"
 fi
 
 if ! type uv &>/dev/null; then
-    echo "INFO: uv not installed, installing"
+    echoinfo "Uv not installed, installing"
     curl -LsSf https://astral.sh/uv/install.sh | sh
-    echo "INFO: finished installing uv"
+    echoinfo "Finished installing uv"
 else
-    echo "INFO: uv already installed"
+    echoinfo "Uv already installed, skipping"
 fi
